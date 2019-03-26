@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  # mailers:
+  sessions_mailer:
+    magic_link:
+      subject: '%{user}, welcome to %{app_name}!'
+      body: 'Someone (hopefully you) has requested access to %{app_name}. Follow the link to open the application.'
+      signature: 'The %{app_name} Team'
+  # End mailers

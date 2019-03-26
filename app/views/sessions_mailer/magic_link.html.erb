@@ -1,0 +1,5 @@
+<h1><%= t('.subject', user: @user.to_label, app_name: Rails.application.config.app_name) %></h1>
+<p><%= t('.body', app_name: Rails.application.config.app_name) %></p>
+<p><%= link_to @magic_link, @magic_link, target: '_blank' %></p>
+<br/>
+<p><%= t('.signature', app_name: Rails.application.config.app_name) %></p>
