@@ -1,6 +1,4 @@
 class ApplicationController < ActionController::API
-  include JSONAPI::ActsAsResourceController
-
   before_action :make_action_mailer_use_request_host_and_protocol
 
   private
