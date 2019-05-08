@@ -14,7 +14,9 @@ class MagicLinksController < ApplicationController
   private
   def record_invalid(error)
     json_errors = error.record.errors.messages.map { | k,v | {title: k, detail: v}}
-    render json: { errors: json_errors},
-      status: :unprocessable_entity
+    render json: {
+      errors: json_errors
+    },
+    status: :unprocessable_entity
   end
 end

@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    user = User.valid_with_token(params[:refresh_token])
+    user = User.valid_with_token(params[:token])
 
     if user
       user.invalidate_token
@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 
       render json: { token: token }
     else
-      # Inplement else branch?
+      # Implement else branch?
     end
   end
 end
